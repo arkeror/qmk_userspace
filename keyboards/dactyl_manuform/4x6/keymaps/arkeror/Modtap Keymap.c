@@ -20,6 +20,7 @@
 #define MT_K LCTL_T(KC_K)
 #define MT_L LALT_T(KC_L)
 #define MT_SCLN LGUI_T(KC_SCLN)
+#define MT_GAME MT(GAME, KC_HOME)
 
 //Keycode Shortcuts
 #define KC_BAK KC_BACKSPACE
@@ -52,11 +53,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      */
     [_BASE] = LAYOUT(
         KC_ESC,  KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,               KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,    KC_GRV,
-        KC_TAB,  KC_A,    KC_S,    KC_D,    KC_F,    KC_G,               KC_H,    MT_J,    MT_K,    MT_L,    MT_SCLN, KC_QUOT,
+        KC_TAB,  MT_A,    MT_S,    MT_D,    MT_F,    KC_G,               KC_H,    MT_J,    MT_K,    MT_L,    MT_SCLN, KC_QUOT,
         KC_LSFT, KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,               KC_N,    KC_M,    KC_COMM, KC_DOT,  KC_SLSH, KC_BSLS,
                           KC_LBRC, KC_RBRC,                                                KC_MINS, KC_EQL,
                                             MOD,     KC_SPC,             KC_ENT,  NUM,  
-                                            KC_LGUI, KC_HOME,            KC_END,  KC_RSFT,
+                                            KC_LGUI, MT_GAME,            KC_END,  KC_RSFT,
                                             KC_LCTL, KC_LALT,            KC_DEL,  KC_BAK
     ),
 
@@ -75,19 +76,19 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         _______, _______, _______, _______, _______, _______,             _______, _______, _______, _______, _______, _______,
         _______, _______, _______, LR_Spam,  V_Spam, _______,             _______, _______, _______, _______, _______, _______,
                           _______, _______,                                                 DT_DOWN,  DT_UP,
-                                            _______, _______,             _______, GAME,
+                                            _______, _______,             _______, _______,
                                             _______, QK_BOOT,             _______, _______,
                                             _______, _______,             _______, DT_PRNT
     ),
 
     [_GAME] = LAYOUT(
-        KC_ESC,  KC_TAB,  KC_Q,    KC_W,    KC_E,    KC_R,                _______, _______, _______, _______,  _______, _______,
+        _______, KC_TAB,  KC_Q,    KC_W,    KC_E,    KC_R,                _______, _______, _______, _______,  _______, _______,
         _______, KC_LSFT, KC_A,    KC_S,    KC_D,    KC_F,                _______, _______, _______, _______, _______, _______,
-        _______, KC_LSFT, KC_Z,    KC_X,    KC_C,    KC_V,                _______, _______, _______, _______, _______, _______,
+        _______, _______, KC_Z,    KC_X,    KC_C,    KC_V,                _______, _______, _______, _______, _______, _______,
                           _______, _______,                                                 _______, _______,
-                                            NUM,     KC_SPC,              _______, GAME,
-                                            _______, _______,                _______, _______,
-                                            KC_LCTL, _______,             _______, _______
+                                            _______, KC_SPC,              _______, _______,
+                                            _______, GAME,                _______, _______,
+                                            _______, _______,             _______, _______
     )
 };
 

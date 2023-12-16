@@ -26,3 +26,11 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 //#define USE_SERIAL
 //#define SOFT_SERIAL_PIN D0
 #define EE_HANDS
+
+#define TAPPING_TERM 450
+#define AUTO_SHIFT_TIMEOUT 300
+//#define NO_AUTO_SHIFT_SPECIAL //Do not Auto Shift special keys, which include -_, =+, [{, ]}, ;:, ‘“, ,<, .>, /?, and the KC_TAB.
+#define NO_AUTO_SHIFT_ALPHA //Do not Auto Shift alpha characters, which include A through Z.
+
+ 
+
